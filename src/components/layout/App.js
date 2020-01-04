@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, HashRouter, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Navbar from './Navbar';
 import Dashboard from '../dashboard/Dashboard';
 import Projectdetail from '../project/Projectdetail';
@@ -12,15 +12,13 @@ export default function App() {
     <Router>
       <div className="App">
         <Navbar />
-        <HashRouter basename="/">
-          <Switch>
-            <Route exact path="/" component={Dashboard} />
-            <Route path="/project/:id" component={Projectdetail} />
-            <Route path="/signin" component={Signin} />
-            <Route path="/signup" component={Signup} />
-            <Route path="/create" component={Createproject} />
-          </Switch>
-        </HashRouter>
+        <Switch>
+          <Route exact path="/" component={Dashboard} />
+          <Route path="/project/:id" component={Projectdetail} />
+          <Route path="/signin" component={Signin} />
+          <Route path="/signup" component={Signup} />
+          <Route path="/create" component={Createproject} />
+        </Switch>
       </div>
     </Router>
   );

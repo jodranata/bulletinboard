@@ -1,6 +1,5 @@
 {
   "name": "5_managementtool",
-  "homepage": "http://jodranata.github.io/bulletinboard",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
